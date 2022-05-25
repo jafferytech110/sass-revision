@@ -1,0 +1,20 @@
+// mixin is function like in programming language
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+header{
+    background-color: aqua;
+    @include flexCenter(row);
+    // nesting
+    button{
+        background-color: $primaryBtn;
+
+        &:hover{
+            background-color: $primaryBtnHover;
+        }
+    }
+}
